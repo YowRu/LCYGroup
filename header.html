@@ -83,14 +83,14 @@ $(document).ready(function(){
    let ary = url.split('/');
    let nowPage = ary[ary.length -1];
     if(nowPage !=='index.html'){
+        $('header .right a.innovation').attr('href','#innovation');
+      $('header .right a.future').attr('href','#future');
+      $('header .right a.keyword').attr('href','#keyword');
+    }
+    if(nowPage == 'index.html#innovation' || 'index.html#future' || 'index.html#keyword'){
       $('header .right a.innovation').attr('href','index.html#innovation');
       $('header .right a.future').attr('href','index.html#future');
       $('header .right a.keyword').attr('href','index.html#keyword');
-    }
-    if(nowPage == 'index.html#innovation' || 'index.html#future' || 'index.html#keyword'){
-      $('header .right a.innovation').attr('href','#innovation');
-      $('header .right a.future').attr('href','#future');
-      $('header .right a.keyword').attr('href','#keyword');
     }
 
   /*menu*/
