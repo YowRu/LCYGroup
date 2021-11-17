@@ -278,7 +278,7 @@ header.scroll .right a {
     background-size: cover;
     background-color: #0a264e;
     height: 1000px;
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 #future .row {
@@ -385,12 +385,14 @@ header.scroll .right a {
 .flex .row {
     width: 32%;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .flex .row .text {
     background-color: #001829;
     padding: 30px 0 20px 20px;
     margin-top: -15px;
+    display: block;
 }
 
 .flex .row p {
@@ -625,6 +627,10 @@ footer .text p {
         background: url(../img/bg_gray.png) no-repeat 26% center;
         background-size: contain;
     }
+    .flex .row img:hover {
+        width: 140%;
+        margin-left: -20%;
+    }
 }
 
 @media(max-width:1470px) {
@@ -650,21 +656,11 @@ footer .text p {
     }
     #future {
         height: auto;
-    }
-    #future .flex {
-        width: 60%;
-        margin: 10px auto;
-        flex-direction: column;
-    }
-    #future .flex .row {
-        width: 100%;
-        margin: 20px auto;
-    }
-    .flex .row img {
-        height: auto;
+        padding: 30px 0;
     }
     #future .flex .row p {
         line-height: 2.3rem;
+        font-size: 1.3rem;
     }
     .title {
         margin-bottom: 230px;
@@ -700,6 +696,13 @@ footer .text p {
     #keyword .flex p {
         font-size: 2.7rem;
     }
+    .flex .row img {
+        height: 300px;
+    }
+    .flex .row img:hover {
+        width: 160%;
+        margin-left: -30%;
+    }
 }
 
 @media(max-width:1200px) {
@@ -709,6 +712,22 @@ footer .text p {
     }
     .flex p {
         font-size: 1.7rem;
+    }
+    .flex .row .text {
+        padding-left: 10px;
+    }
+    #future .flex .row p {
+        font-size: 1.2rem;
+    }
+    .flex .row img {
+        height: 250px;
+    }
+    .flex .row img:hover {
+        width: 130%;
+        margin-left: -15%;
+    }
+    #future .flex {
+        width: 95%;
     }
 }
 
@@ -789,6 +808,21 @@ footer .text p {
     #keyword .flex span {
         font-size: 1.7rem;
         margin-left: 270px;
+    }
+}
+
+@media(max-width:1010px) {
+    #future .flex {
+        width: 60%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    #future .flex .row {
+        width: 100%;
+        margin: 20px auto;
+    }
+    .flex .row img {
+        height: auto;
     }
 }
 
