@@ -113,18 +113,20 @@ $(document).ready(function(){
       $('body').css('overflow', 'auto');
   });
 
-      $('a[href=#innovation]').click(function () {
-          if ($W > 750) {
-              $('html,body').animate({
-                  scrollTop: $('#innovation').offset().top - 143
-              }, 800);
-          } else {
-              $('html,body').animate({
-                  scrollTop: $('#innovation').offset().top - 61
-              }, 800);
-          }
-      });
-      $('a[href=#future]').click(function () {
+     
+      $('.innovation').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#innovation').offset().top - 162
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#innovation').offset().top - 61
+                }, 800);
+            }
+        });
+
+      $('.future').click(function () {
           if ($W > 750) {
               $('html,body').animate({
                   scrollTop: $('#future').offset().top - 143
@@ -135,7 +137,8 @@ $(document).ready(function(){
               }, 800);
           }
       });
-      $('a[href=#keyword]').click(function () {
+
+      $('.keyword').click(function () {
           if ($W > 750) {
               $('html,body').animate({
                   scrollTop: $('#keyword').offset().top - 143
@@ -146,5 +149,6 @@ $(document).ready(function(){
               }, 800);
           }
       });
+      
 });
 </script>

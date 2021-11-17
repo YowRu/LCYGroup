@@ -32,7 +32,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8"SameSite='SameSite=Lax; Secure' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -42,7 +42,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8"SameSite='SameSite=Lax; Secure' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="left">
             <div class="num"><img src="img/02.svg" alt=""></div>
@@ -64,7 +64,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8"SameSite='SameSite=Lax; Secure' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -74,7 +74,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8"SameSite='SameSite=Lax; Secure' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="left">
             <div class="num"><img src="img/04.svg" alt=""></div>
@@ -130,7 +130,10 @@
   </div>
   <footer></footer>
   <script>
+    
+    document.cookie = "SameSite=Lax; Secure";
     $(document).ready(function(){
+      document.cookie="SameSite=Lax; Secure" ;
       $('.flex .right').click(function(){
         $(this).siblings('.popUp').css({'display':'flex'});
         $('body').css('overflow', 'hidden');
