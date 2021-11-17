@@ -71,6 +71,16 @@
   #main .title {
     font-size: 2.6rem;
   }
+  #main .rowBg {
+    height: 70vh;
+  }
+  #main .content {
+    margin-top: -70vh;
+  }
+  #main .title {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
 }
 
 @media(max-width:920px) {
@@ -83,19 +93,18 @@
   #main .blod {
     font-size: 2rem;
   }
+  #main .rowBg {
+    height: 60vh;
+  }
+  #main .content {
+    margin-top: -53vh;
+  }
+  #main .title {
+    font-size: 2rem;
+  }
 }
 
 @media(max-width:850px) {
-  #main .rowBg {
-    height: 70vh;
-  }
-  #main .content {
-    margin-top: -70vh;
-  }
-  #main .title {
-    font-size: 2.2rem;
-    margin-bottom: 60px;
-  }
   #main .border {
     font-size: 1.4rem;
   }
@@ -111,14 +120,11 @@
 }
 
 @media(max-width:700px) {
+  #main .title {
+    font-size: 1.8rem;
+  }
   #main img.top {
     width: 80%;
-  }
-  #main .content {
-    margin-top: -63vh;
-  }
-  #main .title {
-    font-size: 2rem;
   }
   #main .border {
     line-height: 2.7rem;
@@ -141,12 +147,6 @@
 }
 
 @media(max-width:600px) {
-  #main .rowBg {
-    height: 60vh;
-  }
-  #main .content {
-    margin-top: -53vh;
-  }
   #main .border {
     font-size: 1.2rem;
     line-height: 2.5rem;
@@ -162,9 +162,15 @@
   #main .blod {
     font-size: 1.5rem;
   }
+  #main .title {
+    width: 80%;
+  }
 }
 
 @media(max-width:500px) {
+  #main .content {
+    margin-top: -50vh;
+  }
   #main p {
     margin-bottom: 40px;
   }
@@ -185,15 +191,24 @@
   }
 }
 
-@media(max-width:414px) {
-  #main .title {
-    font-size: 1.8rem;
-  }
+@media(max-width:450px) {
   #main .rowBg {
     height: 55vh;
   }
   #main .content {
-    margin-top: -47vh;
+    margin-top: -45vh;
+  }
+}
+
+@media(max-width:414px) {
+  #main .title {
+    font-size: 1.6rem;
+  }
+  #main .rowBg {
+    height: 50vh;
+  }
+  #main .content {
+    margin-top: -40vh;
   }
   #main .border {
     padding-left: 24px;
@@ -203,13 +218,10 @@
 }
 
 @media(max-width:350px) {
-  #main img.top {
-    width: 85%;
+  #main img.top, #main .title {
+    width: 90%;
   }
   #main p {
     font-size: .9rem;
-  }
-  #main .title {
-    font-size: 1.6rem;
   }
 }
