@@ -5,4 +5,18 @@
     <p>Tel +886-2-27631611 (業務服務)</p>
     <p>Fax +886-2-27645749</p>
   </div>
+  <img src="img/top_btn.svg" alt="" class="goTop">
 </div>
+<script>
+  //goTop
+  $(window).scroll(function(){
+        if ( $(this).scrollTop() > 1500){ 
+            $('.goTop').fadeIn(1000); 
+        }else { 
+            $('.goTop').stop().fadeOut(500); 
+        }
+    });
+    $('.goTop').click(function(){
+        $('html,body').animate({scrollTop:-110},1000); 
+    });
+</script>

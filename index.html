@@ -14,8 +14,8 @@
       <div id="banner">
         <img src="img/banner.png" alt="">
         <div class="title">
-          <div class="en">INNAVATION</div>
-          <p>帶動業界嶄新思維，真正落實永續發展</p>
+          <div class="en">INNOVATION</div>
+          <p>帶動業界嶄新思維，真正落實循環經濟</p>
         </div>
       </div>
       <div id="innovation">
@@ -44,10 +44,10 @@
             <div class="close"><img src="img/close.svg" alt=""></div>
             <iframe src="https://www.youtube-nocookie.com/embed/fBAniyzmsr8"SameSite='Lax; Secure' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="left">
+          <div class="left maxH">
             <div class="num"><img src="img/02.svg" alt=""></div>
-            <p>對談：劉文龍總經理Ｘ林子倫副<br>執行長</p>
-            <span>各國相繼宣布碳中和目標，成為全球趨勢已勢不可當，也將為石化產業帶來前所未有的巨大挑戰。有鑑於此，對於台灣如何跟進全球步伐，行政院能源及減碳辦公室副執行長林子倫與李長榮化工總經理劉文龍也有不同見解。</span>
+            <p>對談：劉文龍總經理Ｘ林子倫副執行長<br>「碳中和」浪潮來襲 李長榮如何打造企業競爭力</p>
+            <span>各國相繼宣布碳中和目標，成為全球趨勢已勢不可當，也將為石化產業帶來前所未有的巨大挑戰。有鑑於此，對於台灣如何跟進全球步伐、邁向循環經濟，行政院能源及減碳辦公室副執行長林子倫與李長榮化工總經理劉文龍也有不同見解。</span>
             <div class="play"><img src="img/Play Video.svg" alt=""></div>
           </div>
         </div>
@@ -79,8 +79,7 @@
           <div class="left">
             <div class="num"><img src="img/04.svg" alt=""></div>
             <p>直擊李長榮創新引擎<br>研發中心孵化新人才、新創意、新生意</p>
-            <span>李長榮化工不斷提出令外界眼睛為之一亮的科學創新，背後靠的正是一批由國際頂尖人才的研發部隊，以及一座匯聚創新能量的楠梓研發中心。研發團隊在這落實創新又創業的精神，透過結合市場趨勢的創意發想，並實際於市場落地與進入專利申請，拼出外界不可小覷的競爭力。
-            </span>
+            <span>李長榮化工不斷提出令外界眼睛為之一亮的科學創新，背後靠的正是一批由國際頂尖人才的研發部隊，以及一座匯聚創新能量的楠梓研發中心。研發團隊在這落實創新又創業的精神，透過結合市場趨勢的創意發想，並實際於市場落地與進入專利申請，拼出外界不可小覷的競爭力。</span>
             <div class="play"><img src="img/Play Video.svg" alt=""></div>
           </div>
         </div>
@@ -94,21 +93,21 @@
           <div class="row">
             <img src="img/article1.png" alt="">
             <a class="text" href="articleNew.html">
-              <p>碳中和浪潮來襲<br>李長榮打造減碳企業競爭力</p>
+              <p>「碳中和」浪潮來襲<br>李長榮透過「循環經濟」打造減碳企業競爭力</p>
               <span class="more">Read more</span>
             </a>
           </div>
           <div class="row">
             <img src="img/article2.png" alt="">
-            <a class="text" href="articleSolution.html">
-              <p>實現資源永續　李長榮、 Renato Lab<br>落實循環經濟圈與地球共好</p>
+            <a class="text" href="articleInternational.html">
+              <p>實現資源永續，李長榮、 Renato Lab<br>落實循環經濟圈與地球共好</p>
               <span class="more">Read more</span>
             </a>
           </div>
           <div class="row">
             <img src="img/article3.png" alt="">
-            <a class="text" href="articleInternational.html">
-              <p>直擊李長榮創新引擎 研發中心孵化<br>新人才、新創意、新生意</p>
+            <a class="text" href="articleSolution.html">
+              <p>直擊李長榮科學創新引擎，研發中心孵化<br>新人才、新創意、新生意</p>
               <span class="more">Read more</span>
             </a>
           </div>
@@ -129,11 +128,9 @@
       </div>
   </div>
   <footer></footer>
-  <script>
-    
-    document.cookie = "SameSite=Lax; Secure";
+  <script>  
     $(document).ready(function(){
-      document.cookie="SameSite=Lax; Secure" ;
+    
       //ifram
       $('.flex .right').click(function(){
         $(this).siblings('.popUp').css({'display':'flex'});
@@ -147,9 +144,19 @@
         $(this).parents('.popUp').fadeOut();
         $('body').css('overflow', 'scroll');
       });
+
       //banner
       let $H =$(window).height();
       $('#banner img').height($H);
+
+      //video section height
+      let h = $('#innovation .flex .maxH').height();
+      if($W >800){
+        $('#innovation .flex').height(h);
+      }
+      
+      
+
     });
   </script>
 </body>

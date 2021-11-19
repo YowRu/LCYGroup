@@ -369,7 +369,7 @@ header.scroll .right a {
 }
 
 #innovation .flex.reverse {
-    background: url('../img/bg_gray.png') no-repeat 39% center;
+    background: url('../img/bg_gray.png') no-repeat 32% center;
     background-size: contain;
 }
 
@@ -606,8 +606,23 @@ footer .text p {
     font-size: 1.2rem;
 }
 
+footer .goTop {
+    width: 60px;
+    cursor: pointer;
+    transition: all .8s;
+    position: fixed;
+    right: 9%;
+    z-index: 4;
+    bottom: 20%;
+    opacity: 0.9;
+    display: none;
+}
+
 @media(max-width:1800px) {
     #future .flex {
+        width: 90%;
+    }
+    .flex {
         width: 90%;
     }
 }
@@ -615,6 +630,10 @@ footer .text p {
 @media(max-width:1550px) {
     #future .flex .row p {
         font-size: 1.5rem;
+    }
+    #innovation .flex.reverse {
+        background: url(../img/bg_gray.png) no-repeat 24% center;
+        background-size: contain;
     }
 }
 
@@ -630,6 +649,9 @@ footer .text p {
     .flex .row img:hover {
         width: 140%;
         margin-left: -20%;
+    }
+    .flex p {
+        font-size: 2.3rem;
     }
 }
 
@@ -648,6 +670,9 @@ footer .text p {
 }
 
 @media(max-width:1390px) {
+    footer .goTop {
+        right: 5%;
+    }
     .flex p {
         font-size: 2.1rem;
     }
@@ -832,6 +857,9 @@ footer .text p {
     }
     .close {
         right: 8%;
+    }
+    footer .goTop {
+        right: 3%;
     }
 }
 
