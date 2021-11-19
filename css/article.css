@@ -58,6 +58,12 @@
   margin-top: -47px;
 }
 
+iframe {
+  width: 80%;
+  display: block;
+  margin: 0 auto 40px;
+}
+
 @media(max-width:1800px) {
   #main img.top {
     width: 60%;
