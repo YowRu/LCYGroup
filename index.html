@@ -148,16 +148,20 @@
       //banner
       let $H =$(window).height();
       let $W =$(window).width();
-      $('#banner img').height($H);
+      
+       if(650<$W){
+        $('#banner img').height($H);
+       }else if(500 < $W < 650){
+        $('#banner img').height('80vh');
+       }else if(499 > $W ){
+        $('#banner img').height('70vh');
+       }
 
       //video section height
       let h = $('#innovation .flex .maxH').height();
       if($W >800 && h>424){
         $('#innovation .flex').height(h);
       }
-      
-      
-
     });
   </script>
 </body>
