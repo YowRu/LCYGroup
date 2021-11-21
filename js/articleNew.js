@@ -1,16 +1,21 @@
 
   let w = $('#main img.top').width();
   let h = $('#main img.top').height();
-  $('#main p').width(w);
-  // $('#main .border').outerWidth(w);
+  if(w>0){
+    $('#main p').width(w);
+    $('#main .border').outerWidth(w);
+    $('iframe').width(w);
+  }
   $('iframe').height(h);
-  $('iframe').width(w);
+ 
 //resize
   $(window).resize(function(){
     let w = $('#main img.top').width();
     let h = $('#main img.top').height();
-    $('#main p').width(w);
-    // $('#main .border').outerWidth(w);
     $('iframe').height(h);
-    $('iframe').width(w);
+    if(w>0){
+      $('#main p').width(w);
+      $('#main .border').outerWidth(w);
+      $('iframe').width(w);
+    }
   });
