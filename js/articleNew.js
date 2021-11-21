@@ -2,7 +2,7 @@
   let w = $('#main img.top').width();
   let h = $('#main img.top').height();
   $('#main p').width(w);
-  $('#main .border').outerWidth(w);
+  // $('#main .border').outerWidth(w);
   $('iframe').height(h);
   $('iframe').width(w);
 //resize
@@ -10,7 +10,7 @@
     let w = $('#main img.top').width();
     let h = $('#main img.top').height();
     $('#main p').width(w);
-    $('#main .border').outerWidth(w);
+    // $('#main .border').outerWidth(w);
     $('iframe').height(h);
     $('iframe').width(w);
   });
