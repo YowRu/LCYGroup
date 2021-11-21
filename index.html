@@ -33,7 +33,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" src="https://www.youtube.com/embed/QDpo6p7H1ZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="1"src="https://www.youtube.com/embed/QDpo6p7H1ZQ?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -43,7 +43,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" src="https://www.youtube.com/embed/Aq8cwT94ZKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="2"src="https://www.youtube.com/embed/Aq8cwT94ZKo?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="left maxH">
             <div class="num"><img src="img/02.svg" alt=""></div>
@@ -65,7 +65,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" src="https://www.youtube.com/embed/ez-SLOoioxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="3"src="https://www.youtube.com/embed/ez-SLOoioxU?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -75,7 +75,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" src="https://www.youtube.com/embed/W1qIf79vB1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="4"src="https://www.youtube.com/embed/W1qIf79vB1A?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="left">
             <div class="num"><img src="img/04.svg" alt=""></div>
@@ -133,7 +133,6 @@
     $(document).ready(function(){
     
       //ifram
-    
       $('.flex .right').click(function(){
         $(this).siblings('.popUp').css({'display':'flex'});
         $('body').css('overflow', 'hidden');
@@ -143,9 +142,8 @@
         $('body').css('overflow', 'hidden');
       });
       $('.close').click(function(){
-        // $('.myVideoClass').each(function(){
-        //   $(this).stopVideo();
-        // });
+        let n= $(this).siblings('iframe').attr('num');
+        $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
         $(this).parents('.popUp').fadeOut();
         $('body').css('overflow', 'scroll');
       });
@@ -161,16 +159,18 @@
        }else if(499 > $W ){
         $('#banner img').height('70vh');
        }
-//article link
-$('#future .row:nth-child(1)').click(function(){
-  window.location='articleNew.html'
-});
-$('#future .row:nth-child(2)').click(function(){
-  window.location='articleInternational.html'
-});
-$('#future .row:nth-child(3)').click(function(){
-  window.location='articleSolution.html'
-});
+
+      //article link
+      $('#future .row:nth-child(1)').click(function(){
+        window.location='articleNew.html'
+      });
+      $('#future .row:nth-child(2)').click(function(){
+        window.location='articleInternational.html'
+      });
+      $('#future .row:nth-child(3)').click(function(){
+        window.location='articleSolution.html'
+      });
+
       //video section height
       let h = $('#innovation .flex .maxH').height();
       if($W >800 && h>424){
