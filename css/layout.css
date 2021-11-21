@@ -619,6 +619,10 @@ footer .goTop {
     display: none;
 }
 
+footer .logoBlack {
+    cursor: pointer;
+}
+
 @media(max-width:1800px) {
     #future .flex {
         width: 90%;
@@ -697,7 +701,7 @@ footer .goTop {
 
     #future .flex .row p {
         line-height: 2.3rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .title {
@@ -716,6 +720,10 @@ footer .goTop {
 
     .close {
         right: 19%;
+    }
+
+    .flex .row .text {
+        padding: 30px 0 20px 10px;
     }
 }
 
@@ -766,7 +774,7 @@ footer .goTop {
     }
 
     #future .flex .row p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .flex .row img {
@@ -834,6 +842,10 @@ footer .goTop {
         line-height: normal;
     }
 
+    #future .flex .row p {
+        font-size: 1rem;
+    }
+
     #keyword .flex {
         margin-top: 120px;
         flex-direction: column-reverse;
@@ -893,6 +905,10 @@ footer .goTop {
     #future .flex .row {
         width: 100%;
         margin: 20px auto;
+    }
+
+    #future .flex .row p {
+        font-size: 1.2rem;
     }
 
     .flex .row img {

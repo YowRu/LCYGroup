@@ -1,5 +1,5 @@
 <div class="wp">
-  <img src="img/logoBlack.svg" alt="">
+  <img src="img/logoBlack.svg" alt="" class="logoBlack">
   <div class="text">
     <p>台北市松山區八德路四段85號3樓</p>
     <p>Tel +886-2-27631611 (業務服務)</p>
@@ -8,6 +8,10 @@
   <img src="img/top_btn.svg" alt="" class="goTop">
 </div>
 <script>
+  
+  $('.logoBlack').click(function(){
+    window.location='https://www.lcygroup.com/lcygroup/tc/';
+  });
   //goTop
   $(window).scroll(function(){
         if ( $(this).scrollTop() > 1500){ 
