@@ -1000,6 +1000,10 @@ footer .logoBlack {
     .title p {
         font-size: 1.7rem;
     }
+
+    .flex .row img:hover {
+        display: none;
+    }
 }
 
 @media(max-width:800px) {
@@ -1169,6 +1173,10 @@ footer .logoBlack {
 
     #innovation .flex {
         width: 80%;
+    }
+
+    #innovation .flex:nth-child(1) {
+        margin-top: 0;
     }
 
     .title {
