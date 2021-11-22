@@ -131,7 +131,9 @@
   <footer></footer>
   <script>  
     $(document).ready(function(){
-    
+      let $H =$(window).height();
+      let $W =$(window).width();
+      
       //ifram
       $('.flex .right').click(function(){
         $(this).siblings('.popUp').css({'display':'flex'});
@@ -147,18 +149,6 @@
         $(this).parents('.popUp').fadeOut();
         $('body').css('overflow', 'scroll');
       });
-
-      //banner
-      let $H =$(window).height();
-      let $W =$(window).width();
-      
-       if(650<$W){
-        $('#banner img').height($H);
-       }else if(500 < $W < 650){
-        $('#banner img').height('80vh');
-       }else if(499 > $W ){
-        $('#banner img').height('70vh');
-       }
 
       //article link
       $('#future .row:nth-child(1)').click(function(){

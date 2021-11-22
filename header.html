@@ -1,160 +1,160 @@
 <div class="WP">
-  <div class="left">
-      <nav>
-          <span></span>
-          <span></span>
-          <span></span>
-      </nav>
-      <a href="index.html"><h1>logo</h1></a>  
+    <div class="left">
+        <nav>
+            <span></span>
+            <span></span>
+            <span></span>
+        </nav>
+        <a href="index.html"><h1>logo</h1></a>  
+    </div>
+    <div class="right">
+            <a href="#innovation" class="innovation">創新進行式</a>
+            <a href="#future" class="future">前進綠色未來</a>
+            <a href="#keyword" class="keyword">創新關鍵核心語</a>
+    </div>
+    <div class="menu">
+        <div class="close">＋</div>
+        <img src="img/LogoGreen.svg" alt="">
+        <a href="#innovation"class="innovation">創新進行式</a>
+        <a href="#future" class="future">前進綠色未來</a>
+        <a href="#keyword" class="keyword">創新關鍵核心語</a>
+    </div>
   </div>
-  <div class="right">
-          <a href="#innovation" class="innovation">創新進行式</a>
-          <a href="#future" class="future">前進綠色未來</a>
-          <a href="#keyword" class="keyword">創新關鍵核心語</a>
-  </div>
-  <div class="menu">
-      <div class="close">＋</div>
-      <img src="img/LogoGreen.svg" alt="">
-      <a href="#innovation"class="innovation">創新進行式</a>
-      <a href="#future" class="future">前進綠色未來</a>
-      <a href="#keyword" class="keyword">創新關鍵核心語</a>
-  </div>
-</div>
-<div class="bg"></div>
-<script>
-$(document).ready(function(){
-  let $H=$(window).height();
-  let $W=$(window).width();
-
-  //resize   
- $(window).resize(function(){
-      let $H=$(window).height();
-      let $W=$(window).width();
-      $('header .menu').hide();
-      $('header .bg').hide();
-      $('body').css('overflow', 'auto');
-      
-      if(600>$H){
-          $('header .menu a').css({'line-height':'55px'});
-      }
- });
-
- //scroll
- $(document).scroll(function(){
-   let url = location.href;
-   let ary = url.split('/');
-   let nowPage = ary[ary.length -1];
-   console.log($(document).scrollTop());
-   if(nowPage == 'index.html'){
-      let h = $('#banner img').height();
-      if($W<700){
-        if($(this).scrollTop() > 100){
-              $('header').addClass('scroll');
-          }else{
-              $('header').removeClass('scroll');
-          }
-      }else{
-        if($(this).scrollTop() > (h-40)){
-              $('header').addClass('scroll');
-          }else{
-              $('header').removeClass('scroll');
-          }
-      }
-    }else{
-      let h = $('.rowBg').height();
-      if($W<1550){
-        if($(this).scrollTop() > 100){
-              $('header').addClass('scroll');
-          }else{
-              $('header').removeClass('scroll');
-          }
-      }else{
-        if($(this).scrollTop() > (h-100)){
-            $('header').addClass('scroll');
+  <div class="bg"></div>
+  <script>
+  $(document).ready(function(){
+    let $H=$(window).height();
+    let $W=$(window).width();
+  
+    //resize   
+   $(window).resize(function(){
+        let $H=$(window).height();
+        let $W=$(window).width();
+        $('header .menu').hide();
+        $('header .bg').hide();
+        $('body').css('overflow', 'auto');
+        
+        if(600>$H){
+            $('header .menu a').css({'line-height':'55px'});
+        }
+   });
+  
+   //scroll
+   $(document).scroll(function(){
+     let url = location.href;
+     let ary = url.split('/');
+     let nowPage = ary[ary.length -1];
+     console.log($(document).scrollTop());
+     if(nowPage == 'index.html'){
+        let h = $('#banner img').height();
+        if($W<700){
+          if($(this).scrollTop() > 100){
+                $('header').addClass('scroll');
+            }else{
+                $('header').removeClass('scroll');
+            }
         }else{
-            $('header').removeClass('scroll');
-        }  
+          if($(this).scrollTop() > (h-40)){
+                $('header').addClass('scroll');
+            }else{
+                $('header').removeClass('scroll');
+            }
+        }
+      }else{
+        let h = $('.rowBg').height();
+        if($W<1550){
+          if($(this).scrollTop() > 100){
+                $('header').addClass('scroll');
+            }else{
+                $('header').removeClass('scroll');
+            }
+        }else{
+          if($(this).scrollTop() > (h-100)){
+              $('header').addClass('scroll');
+          }else{
+              $('header').removeClass('scroll');
+          }  
+        }
+      }  
+   });
+  
+   //href
+     let url = location.href;
+     let ary = url.split('/');
+     let nowPage = ary[ary.length -1];
+      if(nowPage !=='index.html'){
+        $('header .right a.innovation').attr('href','#innovation');
+        $('header .right a.future').attr('href','#future');
+        $('header .right a.keyword').attr('href','#keyword');
+        $('header .menu a.innovation').attr('href','#innovation');
+        $('header .menu a.future').attr('href','#future');
+        $('header .menu a.keyword').attr('href','#keyword');
       }
-    }  
- });
-
- //href
-   let url = location.href;
-   let ary = url.split('/');
-   let nowPage = ary[ary.length -1];
-    if(nowPage !=='index.html'){
-      $('header .right a.innovation').attr('href','#innovation');
-      $('header .right a.future').attr('href','#future');
-      $('header .right a.keyword').attr('href','#keyword');
-      $('header .menu a.innovation').attr('href','#innovation');
-      $('header .menu a.future').attr('href','#future');
-      $('header .menu a.keyword').attr('href','#keyword');
-    }
-    if(nowPage == 'index.html#innovation' || 'index.html#future' || 'index.html#keyword'){
-      $('header .right a.innovation').attr('href','index.html#innovation');
-      $('header .right a.future').attr('href','index.html#future');
-      $('header .right a.keyword').attr('href','index.html#keyword');
-      $('header .menu a.innovation').attr('href','index.html#innovation');
-      $('header .menu a.future').attr('href','index.html#future');
-      $('header .menu a.keyword').attr('href','index.html#keyword');
-    }
-
-  /*menu*/
-  $('header nav').click(function () {
-      $('header .menu').show();
-      $('header .bg').show();
-      $('body').css('overflow', 'hidden');
-  });
-  $('header .menu .close').click(function () {
-      $('header .menu').hide();
-      $('header .bg').hide();
-      $('body').css('overflow', 'auto');
-  });
-
-  $('header .menu a').click(function(){
-      $('header .menu').slideUp();
-      $('header .bg').hide();
-      $("body").removeClass('menuOpen');
-      $('header').removeClass('open');
-      $('body').css('overflow', 'auto');
-  });
-
-     
-      $('.innovation').click(function () {
+      if(nowPage == 'index.html#innovation' || 'index.html#future' || 'index.html#keyword'){
+        $('header .right a.innovation').attr('href','index.html#innovation');
+        $('header .right a.future').attr('href','index.html#future');
+        $('header .right a.keyword').attr('href','index.html#keyword');
+        $('header .menu a.innovation').attr('href','index.html#innovation');
+        $('header .menu a.future').attr('href','index.html#future');
+        $('header .menu a.keyword').attr('href','index.html#keyword');
+      }
+  
+    /*menu*/
+    $('header nav').click(function () {
+        $('header .menu').show();
+        $('header .bg').show();
+        $('body').css('overflow', 'hidden');
+    });
+    $('header .menu .close').click(function () {
+        $('header .menu').hide();
+        $('header .bg').hide();
+        $('body').css('overflow', 'auto');
+    });
+  
+    $('header .menu a').click(function(){
+        $('header .menu').slideUp();
+        $('header .bg').hide();
+        $("body").removeClass('menuOpen');
+        $('header').removeClass('open');
+        $('body').css('overflow', 'auto');
+    });
+  
+       
+        $('.innovation').click(function () {
+              if ($W > 750) {
+                  $('html,body').animate({
+                      scrollTop: $('#innovation').offset().top - 162
+                  }, 800);
+              } else {
+                  $('html,body').animate({
+                      scrollTop: $('#innovation').offset().top - 61
+                  }, 800);
+              }
+          });
+  
+        $('.future').click(function () {
             if ($W > 750) {
                 $('html,body').animate({
-                    scrollTop: $('#innovation').offset().top - 162
+                    scrollTop: $('#future').offset().top - 143
                 }, 800);
             } else {
                 $('html,body').animate({
-                    scrollTop: $('#innovation').offset().top - 61
+                    scrollTop: $('#future').offset().top - 61
                 }, 800);
             }
         });
-
-      $('.future').click(function () {
-          if ($W > 750) {
-              $('html,body').animate({
-                  scrollTop: $('#future').offset().top - 143
-              }, 800);
-          } else {
-              $('html,body').animate({
-                  scrollTop: $('#future').offset().top - 61
-              }, 800);
-          }
-      });
-
-      $('.keyword').click(function () {
-          if ($W > 750) {
-              $('html,body').animate({
-                  scrollTop: $('#keyword').offset().top - 143
-              }, 800);
-          } else {
-              $('html,body').animate({
-                  scrollTop: $('#keyword').offset().top - 61
-              }, 800);
-          }
-      });
-      
-});
-</script>
+  
+        $('.keyword').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#keyword').offset().top - 143
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#keyword').offset().top - 61
+                }, 800);
+            }
+        });
+        
+  });
+  </script>

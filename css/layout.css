@@ -240,9 +240,13 @@ header.scroll .right a {
     width: 100vw;
 }
 
+#bannerMobile {
+    display: none;
+}
+
 #banner img {
     width: 100vw;
-    height: 1000px;
+    height: 100vh;
     object-fit: cover;
     object-position: right;
 }
@@ -891,7 +895,7 @@ footer .logoBlack {
     }
 
     #banner img {
-        height: 800px;
+        height: 80vh;
     }
 
     #keyword .flex span {
@@ -932,6 +936,10 @@ footer .logoBlack {
 
     footer .goTop {
         right: 3%;
+    }
+
+    #banner img {
+        object-position: 95%;
     }
 }
 
@@ -1007,6 +1015,12 @@ footer .logoBlack {
     }
 }
 
+@media(max-width:850px) {
+    #banner img {
+        height: 70vh;
+    }
+}
+
 @media(max-width:800px) {
     .flex iframe {
         height: 60vh;
@@ -1028,9 +1042,7 @@ footer .logoBlack {
         left: 48.5%;
     }
 
-    #banner img {
-        height: 730px;
-    }
+
 
     .title {
         margin-top: 100px;
@@ -1070,6 +1082,12 @@ footer .logoBlack {
     }
 }
 
+@media(max-width:750px) {
+    #banner img {
+        height: 60vh;
+    }
+}
+
 @media(max-width:700px) {
     .flex iframe {
         height: 50vh;
@@ -1079,20 +1097,12 @@ footer .logoBlack {
         top: 23%;
     }
 
-    #banner img {
-        height: 700px;
-    }
-
     .flex .right, .flex .right img:nth-child(1), #innovation .flex .right::before {
         height: 400px;
     }
 
     #future .flex {
         width: 80%;
-    }
-
-    #banner img {
-        height: 600px;
     }
 
     #innovation .flex:nth-child(4) {
@@ -1163,13 +1173,10 @@ footer .logoBlack {
     }
 }
 
+
 @media(max-width:600px) {
     header .left a {
         width: 200px;
-    }
-
-    #banner img {
-        height: 600px;
     }
 
     #innovation .flex {
@@ -1472,9 +1479,6 @@ footer .logoBlack {
 @media(max-width:400px) {
     #banner img {
         height: 400px;
-    }
-
-    #banner img {
         object-position: 95%;
     }
 }
