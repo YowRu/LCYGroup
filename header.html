@@ -44,7 +44,7 @@ $(document).ready(function(){
    let url = location.href;
    let ary = url.split('/');
    let nowPage = ary[ary.length -1];
-
+   console.log($(document).scrollTop());
    if(nowPage == 'index.html'){
       let h = $('#banner img').height();
       if($W<700){
