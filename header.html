@@ -39,44 +39,6 @@
         }
    });
   
-   //scroll
-//    $(document).scroll(function(){
-//      let url = location.href;
-//      let ary = url.split('/');
-//      let nowPage = ary[ary.length -1];
-//      console.log($(document).scrollTop());
-//      if(nowPage == 'index.html'){
-//         let h = $('#banner img').height();
-//         if($W<700){
-//           if($(this).scrollTop() > 100){
-//                 $('header').addClass('scroll');
-//             }else{
-//                 $('header').removeClass('scroll');
-//             }
-//         }else{
-//           if($(this).scrollTop() > (h-40)){
-//                 $('header').addClass('scroll');
-//             }else{
-//                 $('header').removeClass('scroll');
-//             }
-//         }
-//       }else{
-//         let h = $('.rowBg').height();
-//         if($W<1550){
-//           if($(this).scrollTop() > 100){
-//                 $('header').addClass('scroll');
-//             }else{
-//                 $('header').removeClass('scroll');
-//             }
-//         }else{
-//           if($(this).scrollTop() > (h-100)){
-//               $('header').addClass('scroll');
-//           }else{
-//               $('header').removeClass('scroll');
-//           }  
-//         }
-//       }  
-//    });
         $(document).scroll(function(){
             if($(this).scrollTop() > 100){
                 $('header').addClass('scroll');
