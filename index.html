@@ -40,7 +40,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="1"src="https://www.youtube.com/embed/QDpo6p7H1ZQ?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="1"src="https://www.youtube.com/embed/QDpo6p7H1ZQ?enablejsapi=1&autoplay=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -50,7 +50,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="2"src="https://www.youtube.com/embed/Aq8cwT94ZKo?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="2"src="https://www.youtube.com/embed/Aq8cwT94ZKo?enablejsapi=1&autoplay=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="left maxH">
             <div class="num"><img src="img/02.svg" alt=""></div>
@@ -72,7 +72,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="3"src="https://www.youtube.com/embed/ez-SLOoioxU?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="3"src="https://www.youtube.com/embed/ez-SLOoioxU?enablejsapi=1&autoplay=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -82,7 +82,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="4"src="https://www.youtube.com/embed/W1qIf79vB1A?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" num="4"src="https://www.youtube.com/embed/W1qIf79vB1A?enablejsapi=1&autoplay=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="left">
             <div class="num"><img src="img/04.svg" alt=""></div>
@@ -159,7 +159,7 @@
         $('body').css('overflow', 'scroll');
       });
 
-      $('iframe').click(function(){
+      $('.myVideoClass').click(function(){
         let n= $(this).attr('num');
         $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
       });
