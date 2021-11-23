@@ -160,7 +160,7 @@
       });
 
       $('iframe').click(function(){
-        let n= $(this).siblings('iframe').attr('num');
+        let n= $(this).attr('num');
         $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
       });
       //article link
