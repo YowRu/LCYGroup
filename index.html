@@ -147,11 +147,12 @@
       
       //ifram
       $('.flex .right').click(function(){
+        $(document).scroll(function() { return false; });
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
         let videoId= $(this).siblings('.popUp').find('.myVideoClass').attr('videoId');
         let id= $(this).siblings('.popUp').find('.myVideoClass').attr('id');
         $(this).siblings('.popUp').css({'display':'flex'});
-        $(document).scroll(function() { return false; });
+        
         // $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
         
         function onYouTubeIframeAPIReady() {
@@ -173,18 +174,20 @@
       });
 
       $('.flex .play').click(function(){
+        $(document).scroll(function() { return false; });
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
         $(this).siblings('.popUp').css({'display':'flex'});
         $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-        $(document).scroll(function() { return false; });
+        
         $('body').css('overflow', 'hidden');
       });
 
       $('.close').click(function(){
+        $(document).scroll(function() { return true; });
         let n= $(this).siblings('iframe').attr('num');
         $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
         $(this).parents('.popUp').fadeOut();
-        $(document).scroll(function() { return true; });
+        
         $('body').css('overflow', 'scroll');
       });
 
