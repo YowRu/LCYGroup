@@ -147,47 +147,28 @@
       
       //ifram
       $('.flex .right').click(function(){
-        $(document).scroll(function() { return false; });
+        $(window).scroll(function() { return false; });
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
         let videoId= $(this).siblings('.popUp').find('.myVideoClass').attr('videoId');
         let id= $(this).siblings('.popUp').find('.myVideoClass').attr('id');
         $(this).siblings('.popUp').css({'display':'flex'});
-        
-        // $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-        
-        function onYouTubeIframeAPIReady() {
-          player = new YT.Player('player', {
-            videoId: videoId,
-            playerVars: {
-              'playsinline': 1
-            },
-            events: {
-              'onReady': onPlayerReady,
-            }
-          });
-        }
-        function onPlayerReady(event) {
-          event.target.playVideo();
-        }
-        onYouTubeIframeAPIReady();
+        $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
         $('body').css('overflow', 'hidden');
       });
 
       $('.flex .play').click(function(){
-        $(document).scroll(function() { return false; });
+        $(window).scroll(function() { return false; });
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
         $(this).siblings('.popUp').css({'display':'flex'});
         $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-        
         $('body').css('overflow', 'hidden');
       });
 
       $('.close').click(function(){
-        $(document).scroll(function() { return true; });
+        $(window).scroll(function() { return true; });
         let n= $(this).siblings('iframe').attr('num');
         $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
         $(this).parents('.popUp').fadeOut();
-        
         $('body').css('overflow', 'scroll');
       });
 
