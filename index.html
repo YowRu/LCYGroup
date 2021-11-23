@@ -33,7 +33,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="1"src="https://www.youtube.com/embed/QDpo6p7H1ZQ?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" id="iframe1" num="1"src="https://www.youtube.com/embed/QDpo6p7H1ZQ?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -43,7 +43,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="2"src="https://www.youtube.com/embed/Aq8cwT94ZKo?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" id="iframe2" num="2"src="https://www.youtube.com/embed/Aq8cwT94ZKo?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="left maxH">
             <div class="num"><img src="img/02.svg" alt=""></div>
@@ -65,7 +65,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="3"src="https://www.youtube.com/embed/ez-SLOoioxU?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" id="iframe3" num="3"src="https://www.youtube.com/embed/ez-SLOoioxU?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="flex reverse">
@@ -75,7 +75,7 @@
           </div>
           <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
-            <iframe class="myVideoClass" num="4"src="https://www.youtube.com/embed/W1qIf79vB1A?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="myVideoClass" id="iframe4" num="4"src="https://www.youtube.com/embed/W1qIf79vB1A?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
           </div>
           <div class="left">
             <div class="num"><img src="img/04.svg" alt=""></div>
@@ -133,22 +133,12 @@
     $(document).ready(function(){
       let $H =$(window).height();
       let $W =$(window).width();
-      //ytplayer
-      let ytplayer = new YT.Player(player, {
-        videoId: videoid,
-        allowfullscreen: 'true',
-        playerVars: {
-            controls: 0,
-            showinfo: 0,
-            autoplay: (autoplay ? 1 : 0)
-        },
-    });
+     
       //ifram
       $('.flex .right').click(function(){
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
         $(this).siblings('.popUp').css({'display':'flex'});
         $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-        $(this).siblings('.popUp').find('.myVideoClass')[n-1].playVideo();
         $('body').css('overflow', 'hidden');
       });
 
@@ -156,7 +146,6 @@
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
         $(this).siblings('.popUp').css({'display':'flex'});
         $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-        $(this).siblings('.popUp').find('.myVideoClass')[n-1].playVideo();
         $('body').css('overflow', 'hidden');
       });
 
