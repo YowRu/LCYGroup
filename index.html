@@ -19,6 +19,13 @@
           <p>帶動業界嶄新思維，真正落實循環經濟</p>
         </div>
       </div>
+      <div id="bannerMobile">
+        <a><img src="img/bannerM.jpg" alt=""></a>
+        <div class="title">
+          <div class="en">INNOVATION</div>
+          <p>帶動業界嶄新思維，真正落實循環經濟</p>
+        </div>
+      </div>
       <div id="innovation">
         <div class="flex">
           <div class="left margin8">
@@ -139,10 +146,12 @@
         $(this).siblings('.popUp').css({'display':'flex'});
         $('body').css('overflow', 'hidden');
       });
+
       $('.flex .play').click(function(){
         $(this).parents('.left').siblings('.popUp').css({'display':'flex'});
         $('body').css('overflow', 'hidden');
       });
+
       $('.close').click(function(){
         let n= $(this).siblings('iframe').attr('num');
         $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
@@ -150,6 +159,10 @@
         $('body').css('overflow', 'scroll');
       });
 
+      $('iframe').click(function(){
+        let n= $(this).siblings('iframe').attr('num');
+        $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+      });
       //article link
       $('#future .row:nth-child(1)').click(function(){
         window.location='articleNew.html'
