@@ -158,9 +158,9 @@
 
       $('.flex .play').click(function(){
         $(window).scroll(function() { return false; });
-        let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
-        $(this).siblings('.popUp').css({'display':'flex'});
-        $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+        let n= $(this).parents('.left').siblings('.right').find('.myVideoClass').attr('num');
+        $(this).parents('.left').find('.popUp').css({'display':'flex'});
+        $(this).parents('.left').siblings('.right').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
         $('body').css('overflow', 'hidden');
       });
 
