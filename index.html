@@ -133,13 +133,22 @@
     $(document).ready(function(){
       let $H =$(window).height();
       let $W =$(window).width();
-      
+      //ytplayer
+      let ytplayer = new YT.Player(player, {
+        videoId: videoid,
+        allowfullscreen: 'true',
+        playerVars: {
+            controls: 0,
+            showinfo: 0,
+            autoplay: (autoplay ? 1 : 0)
+        },
+    });
       //ifram
       $('.flex .right').click(function(){
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
-        alert(n);
         $(this).siblings('.popUp').css({'display':'flex'});
         $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+        $(this).siblings('.popUp').find('.myVideoClass')[n-1].playVideo();
         $('body').css('overflow', 'hidden');
       });
 
@@ -147,6 +156,7 @@
         let n= $(this).siblings('.popUp').find('.myVideoClass').attr('num');
         $(this).siblings('.popUp').css({'display':'flex'});
         $(this).siblings('.popUp').find('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+        $(this).siblings('.popUp').find('.myVideoClass')[n-1].playVideo();
         $('body').css('overflow', 'hidden');
       });
 
@@ -157,11 +167,6 @@
         $('body').css('overflow', 'scroll');
       });
 
-      // $('#player').click(function(){
-      //   let n= $(this).parents('.myVideoClass').attr('num');
-      //   alert(n);
-      //   $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-      // });
       //article link
       $('#future .row:nth-child(1)').click(function(){
         window.location='articleNew.html'
