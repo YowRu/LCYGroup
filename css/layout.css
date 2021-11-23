@@ -994,6 +994,10 @@ footer .logoBlack {
         align-items: center;
     }
 
+    #innovation .flex .right:hover::before {
+        display: none;
+    }
+
     #future .flex {
         width: 70%;
     }
