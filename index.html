@@ -160,7 +160,9 @@
       });
 
       $('.myVideoClass').click(function(){
+          
         let n= $(this).attr('num');
+          alert(n);
         $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
       });
       //article link
