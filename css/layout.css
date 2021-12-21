@@ -221,7 +221,7 @@ header .right a {
     width: auto;
     margin: 10px;
     line-height: 21px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: relative;
     transition: all .5S;
 }
@@ -263,7 +263,7 @@ header.scroll .right a {
 }
 
 .title p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     position: relative;
 }
 
@@ -291,7 +291,7 @@ header.scroll .right a {
 }
 
 #future .row:nth-child(1)::before {
-    content: '創新';
+    content: 'Innovation';
     display: block;
     width: 80px;
     height: 50px;
@@ -300,34 +300,30 @@ header.scroll .right a {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.6rem;
+    font-size: 0.9rem;
     text-align: center;
     line-height: 50px;
-    letter-spacing: 0.4rem;
-    padding-left: 0.4rem;
     box-sizing: border-box;
 }
 
 #future .row:nth-child(2)::before {
-    content: '永續';
+    content: 'Sustainability';
     display: block;
-    width: 80px;
+    width: 120px;
     height: 50px;
     background-color: #8FC719;
     color: #fff;
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.6rem;
+    font-size: 0.9rem;
     text-align: center;
     line-height: 50px;
-    letter-spacing: 0.4rem;
-    padding-left: 0.4rem;
     box-sizing: border-box;
 }
 
 #future .row:nth-child(3)::before {
-    content: '人才';
+    content: 'Talent';
     display: block;
     width: 80px;
     height: 50px;
@@ -336,11 +332,9 @@ header.scroll .right a {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.6rem;
+    font-size: 0.9rem;
     text-align: center;
     line-height: 50px;
-    letter-spacing: 0.4rem;
-    padding-left: 0.4rem;
     box-sizing: border-box;
 }
 
@@ -367,19 +361,18 @@ header.scroll .right a {
 }
 
 #innovation .flex {
-    background: url('../img/bg_gray.png') no-repeat 36% center;
+    background: url('../img/bg_gray.png') no-repeat 11% center;
     background-size: contain;
-    height: 425px;
     overflow: hidden;
 }
 
 #innovation .flex.reverse {
-    background: url('../img/bg_gray.png') no-repeat 32% center;
+    background: url('../img/bg_gray.png') no-repeat 49% center;
     background-size: contain;
 }
 
 .flex {
-    width: 80%;
+    width: 70%;
     margin: 0 auto 200px;
     display: flex;
     justify-content: center;
@@ -401,11 +394,10 @@ header.scroll .right a {
 }
 
 .flex .row p {
-    font-size: 2rem;
     margin-top: -20px;
     padding-top: 20px;
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .flex .row .more {
@@ -429,7 +421,11 @@ header.scroll .right a {
 }
 
 .flex .margin8 {
-    margin-right: 8%;
+    margin-right: 4%;
+}
+
+.flex .left {
+    padding: 10px 0;
 }
 
 .flex .margin5 {
@@ -444,10 +440,9 @@ header.scroll .right a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 4;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .close {
@@ -486,9 +481,17 @@ header.scroll .right a {
     height: 425px;
 }
 
-.flex .right img:nth-child(1) {
-    height: 425px;
+.flex .right .img {
+    width: 700px;
+}
+
+.flex .right .height.img {
+    object-position: top;
+}
+
+.flex .right img {
     object-fit: cover;
+
 }
 
 #innovation .flex .right:hover::before {
@@ -515,17 +518,17 @@ header.scroll .right a {
 }
 
 .flex p {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     color: #000;
     font-weight: 500;
     margin: 10px 0;
-    line-height: 3rem;
+    line-height: 2.3rem;
 }
 
 .flex span {
     font-size: 1.2rem;
-    line-height: 2.4rem;
-    max-width: 600px;
+    line-height: 2rem;
+    max-width: 800px;
     width: 100%;
     display: block;
 }
@@ -551,7 +554,7 @@ header.scroll .right a {
 #keyword .flex span {
     font-size: 1.6rem;
     position: relative;
-    margin-left: 100px;
+    margin-left: 164px;
     margin-top: 30px;
 }
 
@@ -565,32 +568,34 @@ header.scroll .right a {
 
 #keyword .flex p {
     position: relative;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     line-height: 4rem;
 }
 
 #keyword .flex p::before {
-    content: '';
+    content: " '' ";
     display: block;
-    background: url('../img/quote_1.svg') no-repeat center;
-    background-size: contain;
+    /* background: url('../img/quote_1.svg') no-repeat center;
+    background-size: contain; */
     width: 30px;
     height: 40px;
     position: absolute;
     top: 0;
     left: -55px;
+    color: #8FC719;
 }
 
 #keyword .flex p::after {
-    content: '';
+    content: " '' ";
     display: block;
-    background: url('../img/quote_2.svg') no-repeat center;
-    background-size: contain;
+    /* background: url('../img/quote_2.svg') no-repeat center;
+    background-size: contain; */
     width: 30px;
     height: 40px;
     position: absolute;
     bottom: 35px;
-    right: -50px;
+    right: 100px;
+    color: #8FC719;
 }
 
 footer {
@@ -629,13 +634,36 @@ footer .logoBlack {
     cursor: pointer;
 }
 
+@media(max-width:1850px) {
+    #keyword .flex p::after {
+        right: 50px;
+    }
+}
+
 @media(max-width:1800px) {
     #future .flex {
         width: 90%;
     }
 
     .flex {
-        width: 90%;
+        width: 80%;
+    }
+
+    #keyword .flex p::after {
+        right: 0;
+    }
+
+}
+
+@media(max-width:1600px) {
+    #innovation .flex {
+        background: url('../img/bg_gray.png') no-repeat 0% center;
+        background-size: contain;
+        overflow: hidden;
+    }
+
+    .flex .right .img {
+        width: 619px;
     }
 }
 
@@ -648,41 +676,32 @@ footer .logoBlack {
         padding-left: 10px;
     }
 
-    #innovation .flex.reverse {
-        background: url(../img/bg_gray.png) no-repeat 24% center;
+    #innovation .flex {
+        background: url(../img/bg_gray.png) no-repeat 0% center;
         background-size: contain;
     }
+
+    #innovation .flex.reverse {
+        background: url(../img/bg_gray.png) no-repeat 43% center;
+        background-size: contain;
+    }
+
 }
 
 @media(max-width:1530px) {
-    #innovation .flex {
-        background: url(../img/bg_gray.png) no-repeat 26% center;
-        background-size: contain;
-    }
-
-    #innovation .flex.reverse {
-        background: url(../img/bg_gray.png) no-repeat 26% center;
-        background-size: contain;
-    }
-
     .flex .row img:hover {
         width: 140%;
         margin-left: -20%;
     }
-
-    .flex p {
-        font-size: 2.1rem;
-    }
 }
 
 @media(max-width:1470px) {
-    #innovation .flex {
-        background: url(../img/bg_gray.png) no-repeat 9% center;
-        background-size: contain;
+    .flex .right .img {
+        width: 593px;
     }
 
     #innovation .flex.reverse {
-        background: url(../img/bg_gray.png) no-repeat 32% center;
+        background: url(../img/bg_gray.png) no-repeat 36% center;
         background-size: contain;
     }
 
@@ -696,8 +715,12 @@ footer .logoBlack {
         right: 5%;
     }
 
+    .flex .right .img {
+        width: 511px;
+    }
+
     .flex p {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
     }
 
     .flex span {
@@ -711,7 +734,7 @@ footer .logoBlack {
 
     #future .flex .row p {
         line-height: 2.3rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .title {
@@ -738,14 +761,11 @@ footer .logoBlack {
 }
 
 @media(max-width:1300px) {
-    #innovation .flex {
-        background: url(../img/bg_gray.png) no-repeat -10% center;
+    #innovation .flex.reverse {
+        background: url(../img/bg_gray.png) no-repeat 23% center;
         background-size: contain;
     }
 
-    .flex p {
-        font-size: 1.8rem;
-    }
 
     .flex span {
         font-size: .9rem;
@@ -771,12 +791,8 @@ footer .logoBlack {
 
 @media(max-width:1200px) {
     #innovation .flex {
-        background: url(../img/bg_gray.png) no-repeat -20% center;
+        background: url(../img/bg_gray.png) no-repeat 23% center;
         background-size: contain;
-    }
-
-    .flex p {
-        font-size: 1.7rem;
     }
 
     .flex .row .text {
@@ -905,6 +921,12 @@ footer .logoBlack {
     }
 }
 
+@media(max-width:1045px) {
+    #future .flex .row p {
+        font-size: 0.95rem;
+    }
+}
+
 @media(max-width:1010px) {
     #future .flex {
         width: 60%;
@@ -992,10 +1014,6 @@ footer .logoBlack {
         margin: 0 auto;
         justify-content: center;
         align-items: center;
-    }
-
-    #innovation .flex .right:hover::before {
-        display: none;
     }
 
     #future .flex {

@@ -6,7 +6,9 @@
     $('#main .border').outerWidth(w);
     $('iframe').width(w);
   }
-  $('iframe').height(h);
+  if(h>0){
+    $('iframe').height(h);
+  }
  
 //resize
   $(window).resize(function(){
