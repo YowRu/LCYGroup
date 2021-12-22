@@ -218,11 +218,13 @@
       // if($W >800 && h>424){
       //   $('#innovation .flex').height(h);
       // }
-$('#innovation .flex').each(function(){
-  let h=$(this).outerHeight();
-  $(this).find('.right.height').height(h);
-  $(this).find('.right .img').height(h);
-});
+      if($W >1160){
+        $('#innovation .flex').each(function(){
+          let h=$(this).outerHeight();
+          $(this).find('.right.height').height(h);
+          $(this).find('.right .img').height(h);
+        });
+      }
       
 
     });

@@ -290,10 +290,12 @@ header.scroll .right a {
     position: relative;
 }
 
+
+
 #future .row:nth-child(1)::before {
     content: 'Innovation';
     display: block;
-    width: 80px;
+    width: auto;
     height: 50px;
     background-color: #8FC719;
     color: #fff;
@@ -304,12 +306,13 @@ header.scroll .right a {
     text-align: center;
     line-height: 50px;
     box-sizing: border-box;
+    padding: 0 8px;
 }
 
 #future .row:nth-child(2)::before {
     content: 'Sustainability';
     display: block;
-    width: 120px;
+    width: auto;
     height: 50px;
     background-color: #8FC719;
     color: #fff;
@@ -320,12 +323,13 @@ header.scroll .right a {
     text-align: center;
     line-height: 50px;
     box-sizing: border-box;
+    padding: 0 8px;
 }
 
 #future .row:nth-child(3)::before {
     content: 'Talent';
     display: block;
-    width: 80px;
+    width: auto;
     height: 50px;
     background-color: #8FC719;
     color: #fff;
@@ -336,6 +340,7 @@ header.scroll .right a {
     text-align: center;
     line-height: 50px;
     box-sizing: border-box;
+    padding: 0 8px;
 }
 
 #future .title {
@@ -554,7 +559,7 @@ header.scroll .right a {
 #keyword .flex span {
     font-size: 1.6rem;
     position: relative;
-    margin-left: 164px;
+    margin-left: 13%;
     margin-top: 30px;
 }
 
@@ -711,6 +716,15 @@ footer .logoBlack {
 }
 
 @media(max-width:1390px) {
+    #keyword .flex p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    #keyword .flex span {
+        font-size: 1.4rem;
+    }
+
     footer .goTop {
         right: 5%;
     }
@@ -775,10 +789,6 @@ footer .logoBlack {
         margin-right: 6%;
     }
 
-    #keyword .flex p {
-        font-size: 2.3rem;
-    }
-
     .flex .row img {
         height: 300px;
     }
@@ -799,8 +809,25 @@ footer .logoBlack {
         padding-left: 10px;
     }
 
+    #future .row:nth-child(2) img {
+        object-position: left;
+    }
+
     #future .flex .row p {
         font-size: 1.1rem;
+    }
+
+    #keyword .flex p::after {
+        right: -16px;
+        bottom: 21px;
+    }
+
+    #keyword .flex p {
+        font-size: 1.8rem;
+    }
+
+    #keyword .flex span {
+        font-size: 1.2rem;
     }
 
     .flex .row img {
@@ -820,10 +847,15 @@ footer .logoBlack {
 @media(max-width:1160px) {
     #keyword .flex p {
         font-size: 2.2rem;
+        text-align: center;
     }
 
     .flex iframe {
         width: 70vw;
+    }
+
+    #future .row:nth-child(2) img {
+        object-position: center;
     }
 
     .close {
@@ -882,7 +914,8 @@ footer .logoBlack {
     }
 
     #keyword .right {
-        max-width: 521px;
+        max-width: 80%;
+        margin-left: 0;
     }
 
     #keyword img {
@@ -891,9 +924,10 @@ footer .logoBlack {
         margin-right: 0;
     }
 
-    #keyword .flex p {
-        text-align: center;
+    #keyword .flex p::after {
+        right: -9%;
     }
+
 
     #innovation .flex {
         margin-top: -100px;
@@ -917,7 +951,17 @@ footer .logoBlack {
 
     #keyword .flex span {
         font-size: 1.7rem;
-        margin-left: 270px;
+        margin-left: 30%;
+    }
+}
+
+@media(max-width:1060px) {
+    #keyword .flex p {
+        font-size: 2rem;
+    }
+
+    #keyword .flex span {
+        font-size: 1.5rem;
     }
 }
 
@@ -977,6 +1021,14 @@ footer .logoBlack {
 
     #future .title {
         margin-top: 70px;
+    }
+
+    #keyword .flex p {
+        font-size: 1.8rem;
+    }
+
+    #keyword .flex span {
+        font-size: 1.3rem;
     }
 }
 
@@ -1042,6 +1094,10 @@ footer .logoBlack {
     #banner img {
         height: 70vh;
     }
+
+    #keyword .flex span {
+        margin-left: 23%;
+    }
 }
 
 @media(max-width:800px) {
@@ -1065,7 +1121,9 @@ footer .logoBlack {
         left: 48.5%;
     }
 
-
+    #keyword .flex span {
+        font-size: 1.1rem;
+    }
 
     .title {
         margin-top: 100px;
@@ -1081,15 +1139,11 @@ footer .logoBlack {
     }
 
     #keyword .flex p {
-        font-size: 2.3rem;
-    }
-
-    #keyword .flex span {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     #keyword .flex p::before {
-        left: -8px;
+        left: -4%;
     }
 
     #keyword .flex p::after {
@@ -1128,6 +1182,11 @@ footer .logoBlack {
         width: 80%;
     }
 
+    #future .flex .row p {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
     #innovation .flex:nth-child(4) {
         margin-bottom: 150px;
     }
@@ -1140,20 +1199,8 @@ footer .logoBlack {
         font-weight: 200;
     }
 
-    #keyword .flex p {
-        font-size: 2rem;
-    }
-
-    #keyword .flex span {
-        font-size: 1.3rem;
-    }
-
     .title {
         margin-top: 90px;
-    }
-
-    #keyword .flex p {
-        line-height: 3.4rem;
     }
 
     #keyword .title p:after {
@@ -1161,14 +1208,6 @@ footer .logoBlack {
         left: 48.5%;
         font-weight: 200;
         font-size: 2.7rem;
-    }
-
-    #keyword .flex p::before {
-        left: 0;
-    }
-
-    #keyword .flex p::after {
-        right: -6px;
     }
 
     .title .en {
@@ -1196,6 +1235,15 @@ footer .logoBlack {
     }
 }
 
+@media(max-width:650px) {
+    #keyword .flex p {
+        font-size: 1.4rem;
+    }
+
+    #keyword .flex span {
+        font-size: 1rem;
+    }
+}
 
 @media(max-width:600px) {
     header .left a {
@@ -1218,8 +1266,12 @@ footer .logoBlack {
         margin: 20px 0 30px;
     }
 
-    #keyword .flex p {
-        font-size: 1.8rem;
+    #future .flex .row p {
+        font-size: 1rem;
+    }
+
+    #keyword .right {
+        max-width: 90%;
     }
 
     #keyword .flex span {
@@ -1234,6 +1286,10 @@ footer .logoBlack {
         margin-bottom: 180px;
     }
 
+    #keyword .flex span {
+        font-size: 0.9rem;
+    }
+
     footer .wp {
         flex-direction: column;
         justify-content: center;
@@ -1246,6 +1302,10 @@ footer .logoBlack {
 
     footer .text p {
         margin-top: 0;
+    }
+
+    .flex .right, .flex .right img:nth-child(1), #innovation .flex .right::before {
+        height: 350px;
     }
 }
 
@@ -1283,10 +1343,6 @@ footer .logoBlack {
         bottom: -22px;
     }
 
-    #keyword .flex span {
-        margin-left: 258px;
-    }
-
     #keyword .flex {
         margin-top: 100px;
         margin-bottom: 150px;
@@ -1298,6 +1354,18 @@ footer .logoBlack {
 
     .close {
         top: 28%;
+    }
+
+    .flex .right, .flex .right img:nth-child(1), #innovation .flex .right::before {
+        height: 300px;
+    }
+
+    #keyword .flex span {
+        margin-left: 17%;
+    }
+
+    #keyword .flex p {
+        font-size: 1.3rem;
     }
 }
 
@@ -1337,22 +1405,6 @@ footer .logoBlack {
         font-size: 2rem;
     }
 
-    #keyword .flex span {
-        margin-left: 238px;
-    }
-
-    #keyword .flex p::after {
-        right: 6px;
-    }
-
-    #keyword .flex p::before {
-        left: 13px;
-    }
-
-    #keyword .flex p {
-        font-size: 1.6rem;
-    }
-
     #keyword .flex {
         margin-top: 0;
         margin-bottom: 100px;
@@ -1368,13 +1420,13 @@ footer .logoBlack {
 }
 
 @media(max-width:470px) {
-    #keyword .flex span {
-        margin-left: 192px;
-        margin-top: 20px;
+
+    #keyword .flex p::after {
+        height: 20px;
     }
 
-    #keyword .flex p::after, #keyword .flex p::before {
-        height: 20px;
+    #keyword .flex p {
+        font-size: 1.2rem;
     }
 
     .flex iframe {
@@ -1383,6 +1435,19 @@ footer .logoBlack {
 
     .close {
         right: 1%;
+    }
+
+    .title .en {
+        font-size: 2rem;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+
+    #keyword .flex p::after {
+        right: -5%;
+        bottom: 28%;
     }
 }
 
@@ -1420,21 +1485,29 @@ footer .logoBlack {
         left: 47.5%;
     }
 
-    #future .flex .row p {
-        font-size: 1.3rem;
-    }
-
     #keyword .flex p {
-        font-size: 1.4rem;
-        line-height: 2.4rem;
-    }
-
-    #keyword .flex p::after {
-        bottom: 0;
+        font-size: 1.1rem;
     }
 
     #keyword .flex span {
-        font-size: 1rem;
+        left: -11%;
+        top: -9%;
+        width: 90%;
+        margin-left: 15%;
+        text-align: right;
+
+    }
+
+    #keyword .flex span:before {
+        content: '__';
+        top: -16%;
+        left: -5%;
+    }
+}
+
+@media(max-width:430px) {
+    #keyword .flex span {
+        width: 98%;
     }
 }
 
@@ -1461,25 +1534,17 @@ footer .logoBlack {
         margin-bottom: 100px;
     }
 
-    #keyword .flex span {
-        margin-left: 107px;
-    }
-
-    #keyword .flex p::after {
-        right: 0;
-    }
-
-    #keyword .flex p::before {
-        left: 0;
-    }
-
     #keyword .flex p {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    #keyword .flex span {
+        font-size: 12px;
     }
 
     #keyword .flex span::before {
-        left: -54px;
-        top: -26%;
+        left: 8%;
     }
 
     #keyword .title p:after {
@@ -1496,6 +1561,14 @@ footer .logoBlack {
 
     footer img {
         width: 150px;
+    }
+
+    .title .en {
+        font-size: 1.8rem;
+    }
+
+    .title p {
+        font-size: 0.9rem;
     }
 }
 
@@ -1547,10 +1620,6 @@ footer .logoBlack {
         margin-bottom: 80px;
     }
 
-    #future .flex .row p {
-        font-size: 1.1rem;
-    }
-
     #future .title {
         margin-bottom: 80px;
         margin-top: 50px;
@@ -1564,12 +1633,16 @@ footer .logoBlack {
         right: -10px;
     }
 
-    #keyword .flex span {
-        margin-left: 150px;
-    }
-
     #keyword .title p:after {
         left: 45.5%;
+    }
+
+    #keyword .flex p::before {
+        left: -9%;
+    }
+
+    #keyword .flex span::before {
+        left: 3%;
     }
 }
 
@@ -1587,8 +1660,8 @@ footer .logoBlack {
         font-size: 2.1rem;
     }
 
-    #keyword .flex p {
-        font-size: 1.2rem;
+    #keyword .flex span::before {
+        left: -3%;
     }
 }
 
@@ -1598,7 +1671,14 @@ footer .logoBlack {
     }
 
     #keyword .flex span {
-        margin-left: 118px;
+        left: -19%;
+        top: -9%;
+    }
+
+    #keyword .flex span::before {
+        left: 3%;
+        top: -10%;
+
     }
 }
 
