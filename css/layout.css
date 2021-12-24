@@ -510,6 +510,21 @@ header.scroll .right a {
     top: 0;
 }
 
+#innovation .flex .right.none {
+    cursor: default;
+}
+
+#innovation .flex .right.none:hover::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .flex .right .icon {
     position: absolute;
     right: 0;
