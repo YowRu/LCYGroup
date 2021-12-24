@@ -30,10 +30,10 @@
           <div class="right none">
             <img src="img/1.png" alt="" class="img">
           </div>
-          <!-- <div class="popUp">
+          <div class="popUp">
             <div class="close"><img src="img/close.svg" alt=""></div>
             <div id="player" class="myVideoClass"></div>
-          </div> -->
+          </div>
         </div>
         <div class="flex reverse">
           <div class="right margin8 height" data-yt="zgTPnJkhkzQ">
@@ -180,16 +180,19 @@
       let $W =$(window).width();
       
       //ifram
-      $('.flex .right.none').click(function(){
-        $('.popUp').css({'display':'none'});
-        $('body').css('overflow', 'scroll');
-      });
+      
       $('.flex .right').click(function(){
-        let yt = $(this).attr('data-yt')
-        player.loadVideoById(yt, 0, "large")
-        $('.popUp').css({'display':'flex'});
-        $('body').css('overflow', 'hidden');
+        if($(this).hasClass('none')){
+          $('.popUp').css({'display':'none'});
+          $('body').css('overflow', 'scroll');
+        }else{
+          let yt = $(this).attr('data-yt')
+          player.loadVideoById(yt, 0, "large")
+          $('.popUp').css({'display':'flex'});
+          $('body').css('overflow', 'hidden');
+        }
       });
+     
       $('.flex .play').click(function(){
         let yt = $(this).attr('data-yt')
         player.loadVideoById(yt, 0, "large")
@@ -197,9 +200,7 @@
         $('body').css('overflow', 'hidden');
       });
       $('.close').click(function(){
-        // let n= $(this).siblings('iframe').attr('num');
-        // $('.myVideoClass')[n-1].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-        player.pauseVideo()
+         player.pauseVideo()
         $(this).parents('.popUp').fadeOut();
         $('body').css('overflow', 'scroll');
       });
