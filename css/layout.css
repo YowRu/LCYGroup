@@ -1124,6 +1124,12 @@ footer .logoBlack {
         top: 18%;
     }
 
+    footer .wp {
+        flex-direction: column;
+        justify-content: center;
+        padding: 23px 0;
+    }
+
     .flex .right, .flex .right img:nth-child(1), #innovation .flex .right::before {
         height: 450px;
     }
@@ -1167,6 +1173,14 @@ footer .logoBlack {
 
     footer .wp {
         width: 90%;
+    }
+
+    footer .wp img {
+        margin-bottom: 20px;
+    }
+
+    footer .text p {
+        margin-top: 0;
     }
 
     .flex .popUp {
@@ -1303,20 +1317,6 @@ footer .logoBlack {
 
     #keyword .flex span {
         font-size: 0.9rem;
-    }
-
-    footer .wp {
-        flex-direction: column;
-        justify-content: center;
-        padding: 23px 0;
-    }
-
-    footer .wp img {
-        margin-bottom: 20px;
-    }
-
-    footer .text p {
-        margin-top: 0;
     }
 
     .flex .right, .flex .right img:nth-child(1), #innovation .flex .right::before {
