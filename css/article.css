@@ -248,7 +248,7 @@ iframe {
   }
 
   #main .small {
-    word-break: break-all;
+    word-break: keep-all;
     margin-top: -30px;
   }
 }
