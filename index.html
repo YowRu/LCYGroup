@@ -97,7 +97,7 @@
         </div>
         <div class="flex">
           <img src="img/portrait.png" alt="">
-          <div class="right">
+          <div class="right none">
             <p>Our R&D center encourages creative thinking and empowers our colleagues to innovate!</p>
             <span>Vincent Liu, Chief Executive Officer of LCY Chemical</span>
           </div>
@@ -169,7 +169,6 @@
           $('body').css('overflow', 'hidden');
         }
       });
-     
       $('.flex .play').click(function(){
         let yt = $(this).attr('data-yt')
         player.loadVideoById(yt, 0, "large")
