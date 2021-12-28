@@ -560,6 +560,7 @@ header.scroll .right a {
 #keyword .right {
     margin-left: 50px;
     height: auto;
+    cursor: default;
 }
 
 #keyword img {
